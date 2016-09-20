@@ -1,4 +1,5 @@
 FROM postgres:latest
 MAINTAINER Yannick Buron yburon@goclouder.net
 
-CMD 
+RUN touch /var/log/postgresql/log
+CMD tail -f /var/log/postgres/log
